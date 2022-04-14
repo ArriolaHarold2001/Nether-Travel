@@ -1,14 +1,20 @@
+# Nether Traveler
+
+This is one of my first solo projects, I was curious and I wanted to get coordinates to build nether portal links easily. So I made this small program to do the calculations for me.
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. Clone the Repository using HTTPS link
+2. Open project in your preffered IDE
+3. Run the Java project
 
-## Folder Structure
+## Output
 
-The workspace contains two folders by default, where:
+Once you run the program the results are similar to this
+Example: `XYZ (-X=West)(X=East) 4.25 / 2.625 / 5.625 (-Z=North)(Z=South)`
+in this case you would need to travel **in the Nether from the known portals location:**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- 4 blocks east
+- 5 blocks South
 
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+We can usually ignore the Y value, you can really get away with being on any Y value as long as the X and Z values are correct.
