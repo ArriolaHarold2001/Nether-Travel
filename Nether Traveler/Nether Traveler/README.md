@@ -7,6 +7,7 @@ This is one of my first solo projects, I was curious and I wanted to get coordin
 1. Clone the Repository using HTTPS link
 2. Open project in your preffered IDE
 3. Run the Java project
+   1. Running the Project looks different depending on your IDE but most I have seen have Run/Debug buttons that will automatically find the main function and run the program.
 
 ## Output
 
