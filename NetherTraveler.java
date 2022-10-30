@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class NetherTraveler {
     public static void main(String[] args) throws Exception {
-        Scanner overworld1 = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         double xVal, yVal, zVal, xXVal, zZVal, yYVal, xAnswer, yAnswer, zAnswer, xXAnswer, yYAnswer, zZAnswer, fXAnswer,
                 fYAnswer, fZAnswer, portalLocX, portalLocY, portalLocZ;
 
@@ -14,28 +14,22 @@ public class NetherTraveler {
         // known portal / 8
 
         System.out.println("Enter desired Overworld X value: "); // Enter the values of your desired X portal location
-        xVal = overworld1.nextDouble();
+        xVal = scanner.nextDouble();
 
         System.out.println("Enter Overworld Y value: "); // Enter the values of your desired Y portal location
-        yVal = overworld1.nextDouble();
+        yVal = scanner.nextDouble();
 
         System.out.println("Enter desired overworld Z value: "); // Enter the values of your desired Z location
-        zVal = overworld1.nextDouble();
+        zVal = scanner.nextDouble();
 
         System.out.println("Enter known Overworld-portal X value: "); // Enter the X value of your known portal
-        xXVal = overworld1.nextDouble();
-        xAnswer = xVal - xXVal; // Get the differance of X values
-        xXAnswer = xAnswer / 8; // Divide the differance result by 8
+        xXVal = (xVal - scanner.nextDouble()) / 8; // Get the differance of X values
 
         System.out.println("Enter known Overworld-portal Y value: "); // Enter the Y value of your known portal
-        yYVal = overworld1.nextDouble();
-        yAnswer = yVal - yYVal; // Get the differance of Y values
-        yYAnswer = yAnswer / 8; // Divide the differance result by 8
+        yYVal = (yVal - scanner.nextDouble()) / 8; // Get the differance of Y values
 
         System.out.println("Enter known overworld-portal Z value: "); // Enter the Z value of your known portal
-        zZVal = overworld1.nextDouble();
-        zAnswer = zVal - zZVal; // Get the differance of Z values
-        zZAnswer = zAnswer / 8; // Divide the differance result by 8
+        zZVal = (zVal - scanner.nextDouble()) / 8; // Get the differance of Z values
 
         portalLocX = (xXVal / 8);
         portalLocY = (yYVal / 8);
@@ -44,6 +38,8 @@ public class NetherTraveler {
         fXAnswer = portalLocX + xXAnswer;
         fYAnswer = portalLocY + yYAnswer;
         fZAnswer = portalLocZ + zZAnswer;
+
+        scanner.close();
 
         System.out.println("Here are your coordinates: "); // Prints text
         System.out.print("XYZ (-X=West)(X=East) " + fXAnswer + " / "); // Prints Text + result of xxanswer
