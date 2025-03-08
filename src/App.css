@@ -1,0 +1,17 @@
+.container {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 5px solid #ccc;
+  border-radius: 5px;
+}
+
+.box > div {
+  display: flex;
+  gap: 10px;
+}
